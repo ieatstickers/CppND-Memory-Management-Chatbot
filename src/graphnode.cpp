@@ -11,7 +11,7 @@ GraphNode::~GraphNode()
     //// STUDENT CODE
     ////
   
-  // This was the cause of the segfault when closing the application
+  // This was the cause of the double free error when closing the application
   // The GraphNode class is not responsible for allocating the heap memory for the chatbot instance (with the "new" keyword),
   // so it shouldn't be deallocating the memory either (with the "delete" keyword)
   // The ChatLogic constructor and destructor already handle this

@@ -1,5 +1,6 @@
 #include "graphedge.h"
 #include "graphnode.h"
+#include "chatlogic.h"
 
 GraphNode::GraphNode(int id)
 {

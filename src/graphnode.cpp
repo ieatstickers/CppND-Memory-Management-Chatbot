@@ -31,6 +31,7 @@ void GraphNode::AddEdgeToParentNode(GraphEdge *edge)
     _parentEdges.push_back(edge);
 }
 
+// TODO: Does this need updating now it will be taking a unique_ptr<GraphEdge>
 void GraphNode::AddEdgeToChildNode(GraphEdge *edge)
 {
     _childEdges.push_back(edge);
@@ -57,7 +58,7 @@ GraphEdge *GraphNode::GetChildEdgeAtIndex(int index)
     //// STUDENT CODE
     ////
 
-    return _childEdges[index];
+    return _childEdges[index].get();
 
     ////
     //// EOF STUDENT CODE

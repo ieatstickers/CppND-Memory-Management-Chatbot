@@ -226,7 +226,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
     ChatBot chatBot("../images/chatbot.png");
   
     // Make sure ChatLogic class can access ChatBot instance
-    SetChatbotHandle(&chatBot); // TODO: This needs to happen each time the chatbot instance is moved to another node
+    SetChatbotHandle(&chatBot);
   
     // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
     chatBot.SetChatLogicHandle(this);

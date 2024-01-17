@@ -31,10 +31,9 @@ void GraphNode::AddEdgeToParentNode(GraphEdge *edge)
     _parentEdges.push_back(edge);
 }
 
-// TODO: Does this need updating now it will be taking a unique_ptr<GraphEdge>
-void GraphNode::AddEdgeToChildNode(GraphEdge *edge)
+void GraphNode::AddEdgeToChildNode(std::unique_ptr<GraphEdge> edge)
 {
-    _childEdges.push_back(edge);
+    _childEdges.push_back(edge); // TODO: Do we need to use std::move here?
 }
 
 //// STUDENT CODE
